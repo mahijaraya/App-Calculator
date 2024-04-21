@@ -1,0 +1,173 @@
+:root {
+  --color-blue: #4b527e;
+  --color-blue-dark: #141e46;
+  --color-gray: #727272;
+  --color-blue-dark: #454545;
+  --color-white: white;
+  --color-wheat: wheat;
+  --color-red: #871313;
+  --color-black: #000;
+  --color-powderblue: #B0E0E6;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "VT323", monospace;
+}
+
+body {
+  background-image: url("../images/2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 12px;
+}
+
+.calculator-body {
+  max-width: 400px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-blue-dark);
+  box-shadow: 7px 7px 12px var(--color-blue-dark);
+  border-radius: 10px;
+  padding: 20px;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+.screen {
+  width: 100%;
+  min-height: 80px;
+  border-radius: 6px;
+  font-size: 50px;
+  padding: 0 15px;
+  background-color: var(--color-powderblue);
+  color: var(--color-black);
+  grid-column: 1 / 5;
+  overflow-wrap: break-word;
+  text-align: end;
+}
+
+.calculator-body input {
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 30px;
+  font-weight: bold;
+  border: 1px solid var(--color-blue-dark);
+  background-color: var(--color-white);
+  box-shadow: 4px 4px 4px var(--color-blue-dark);
+}
+
+.calculator-body input:hover {
+  cursor: pointer;
+  background-color: var(--color-gray);
+  color: var(--color-white);
+  transition: all;
+  transition-duration: 0.2s;
+}
+
+.calculator-body input:active {
+  box-shadow: none;
+  transform: scale(0.95);
+  background-color: var(--color-black);
+}
+
+input.double-zero {
+  grid-column: 2/4;
+}
+
+input.l {
+  grid-column: 1/5;
+}
+
+input.action-evaluate {
+  background-color: var(--color-powderblue);
+  color: var(--color-black);
+}
+
+input.action-backspace {
+  color: var(--color-red);
+}
+
+input.action-clear {
+  color: var(--color-red);
+}
+
+/* Cool infinite background scrolling animation.
+ * Twitter: @kootoopas
+ */
+/* Exo thin font from Google. */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+/* Background data (Original source: https://subtlepatterns.com/grid-me/) */
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling-reverse {
+  100% {
+    background-position: 50px 50px;
+  }
+}
+@-webkit-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-moz-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@-o-keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+@keyframes bg-scrolling {
+  0% {
+    background-position: 50px 50px;
+  }
+}
+/* Main styles */
+body {
+  
+  color: #999;
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  /* img size is 50x50 */
+  background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC") repeat 0 0;
+  -webkit-animation: bg-scrolling-reverse 1s infinite;
+  /* Safari 4+ */
+  -moz-animation: bg-scrolling-reverse 1s infinite;
+  /* Fx 5+ */
+  -o-animation: bg-scrolling-reverse 1s infinite;
+  /* Opera 12+ */
+  animation: bg-scrolling-reverse 1s infinite;
+  /* IE 10+ */
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function: linear;
+  -o-animation-timing-function: linear;
+  animation-timing-function: linear;
+}
